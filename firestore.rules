@@ -1,0 +1,51 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    // ---- Catalog (Categories / Products / Sales) ----
+    // Anyone can read. Signed-in users can write ONLY so the app can upload
+    // the sample data on the first login. Once you see the products in the
+    // app, change `allow write: if signedIn();` to `allow write: if false;`
+    match /Categories/{categoryId} {
+      allow read: if true;
+      allow write: if signedIn();
+    }
+    match /Products/{productId} {
+      allow read: if true;
+      allow write: if signedIn();
+    }
+    match /Sales/{saleId} {
+      allow read: if true;
+      allow write: if signedIn();
+    }
+
+    // ---- User profile + cart + favorites ----
+    match /User/{uid} {
+      allow read, write: if isOwner(uid);
+
+      match /{subCollection=**} {
+        allow read, write: if isOwner(uid);
+      }
+    }
+
+    // ---- Orders ----
+    match /Order/{orderId} {
+      allow read: if signedIn() && resource.data.userUid == request.auth.uid;
+      allow create: if signedIn() && request.resource.data.userUid == request.auth.uid;
+    }
+
+    // ---- Contact Us messages ----
+    match /ContactMessages/{messageId} {
+      allow create: if signedIn();
+    }
+  }
+}
