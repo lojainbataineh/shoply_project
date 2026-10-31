@@ -4,6 +4,17 @@ E-commerce app built with Flutter, Cubit (flutter_bloc) and Firebase
 (Auth + Cloud Firestore). Profile pictures are uploaded to Supabase Storage.
 
 ## Screens
+<img width="1206" height="2622" alt="Screenshot iPhone 18 Pro 31-10-2026 at 3 55 51 PM" src="https://github.com/user-attachments/assets/54da4277-b753-4a01-8428-afe244a0cb67" />
+
+<img width="1206" height="2622" alt="Screenshot iPhone 18 Pro 31-10-2026 at 3 56 28 PM" src="https://github.com/user-attachments/assets/3068b1a1-4e8d-413b-8376-5ecadeceaf41" />
+
+<img width="1206" height="2622" alt="Screenshot iPhone 18 Pro 31-10-2026 at 3 56 33 PM" src="https://github.com/user-attachments/assets/0f0ca7b2-cc1e-4004-9900-0ed4f2fb32cf" />
+
+<img width="1206" height="2622" alt="Screenshot iPhone 18 Pro 31-10-2026 at 3 56 46 PM" src="https://github.com/user-attachments/assets/43c2d6d7-5124-4a62-90a1-2e1820401bfb" />
+
+<img width="1206" height="2622" alt="Screenshot iPhone 18 Pro 31-10-2026 at 3 56 54 PM" src="https://github.com/user-attachments/assets/39a775de-e035-4d61-926b-fa80a61507f2" />
+
+<img width="1206" height="2622" alt="Screenshot iPhone 18 Pro 31-10-2026 at 3 57 06 PM" src="https://github.com/user-attachments/assets/d3eb3e35-b883-44ed-83aa-8a546947eccc" />
 
 Splash · Onboarding · Login · Sign Up · Forgot Password · Home · Categories ·
 Products (by category / trending, with sorting) · Product Details · Favorites ·
